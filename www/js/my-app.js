@@ -1,7 +1,7 @@
 // Initialize your app
 var myApp = new Framework7({
     // Default title for modals
-    modalTitle: 'Aptohome',
+    modalTitle: 'Proteq',
     tapHold: true,
     tapHoldPreventClicks: true,
      // Enable Material theme
@@ -831,7 +831,7 @@ $$('#entrar').on('click', function(){
                 });
             } else {
                 myApp.hideIndicator();
-                myApp.alert('E-mail e/ou senha inválidos!', 'Aptohome');
+                myApp.alert('E-mail e/ou senha inválidos!', 'Proteq');
             }
 
             // chama desabilitar modulos //
@@ -840,7 +840,7 @@ $$('#entrar').on('click', function(){
         }
          ,error:function(data){
             myApp.hideIndicator();
-            myApp.alert('E-mail e/ou senha inválidos!', 'Aptohome');
+            myApp.alert('E-mail e/ou senha inválidos!', 'Proteq');
          }
         });
 
@@ -856,14 +856,14 @@ $$('#esqueceu').on('click', function(){
         data: "action=esqueceu&txtEmailEsqueceu="+$$email,
     })
       .fail(function() {
-        myApp.alert('Email não cadastrado.', 'Aptohome');
+        myApp.alert('Email não cadastrado.', 'Proteq');
       })     
       .done(function(data) {
             if (data=="ok") {
-                myApp.alert('Email de recuperação de senha, enviado com sucesso!', 'Aptohome');
+                myApp.alert('Email de recuperação de senha, enviado com sucesso!', 'Proteq');
                 myApp.closeModal(".popup-esqueceu");
             } else {
-                myApp.alert('Email não cadastrado.', 'Aptohome');
+                myApp.alert('Email não cadastrado.', 'Proteq');
             }
       });
 });
@@ -877,7 +877,7 @@ function atualizartoken(data){
             data: "action=token&token="+localStorage.getItem("token")+"&plataform="+device.platform+"&guid="+localStorage.getItem("guid"),
         })
         .fail(function() {
-        //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+        //myApp.alert('Erro! Tente novamente.', 'Proteq');
         })     
         .done(function(data) {
             //myApp.alert('Sucesso!', 'Rádio 93 FM');
@@ -895,7 +895,7 @@ function atualizartokenSindico(data){
             data: "action=token&token="+localStorage.getItem("token")+"&plataform="+device.platform+"&guid="+localStorage.getItem("sindicoGuid"),
         })
         .fail(function() {
-        //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+        //myApp.alert('Erro! Tente novamente.', 'Proteq');
         })     
         .done(function(data) {
             //myApp.alert('Sucesso!', 'Rádio 93 FM');
@@ -913,7 +913,7 @@ function atualizartokenAdministradora(data){
             data: "action=token&token="+localStorage.getItem("token")+"&plataform="+device.platform+"&guid="+localStorage.getItem("administradoraGuid"),
         })
         .fail(function() {
-        //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+        //myApp.alert('Erro! Tente novamente.', 'Proteq');
         })     
         .done(function(data) {
             //myApp.alert('Sucesso!', 'Rádio 93 FM');
@@ -931,7 +931,7 @@ function atualizartokenPortaria(data){
             data: "action=token&token="+localStorage.getItem("token")+"&plataform="+device.platform+"&guid="+localStorage.getItem("guid"),
         })
         .fail(function() {
-        //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+        //myApp.alert('Erro! Tente novamente.', 'Proteq');
         })     
         .done(function(data) {
             //myApp.alert('Sucesso!', 'Rádio 93 FM');
@@ -980,7 +980,7 @@ function atualizartokenSair(data){
             data: "action=tokenSair&token=&guid="+localStorage.getItem("guid"),
         })
         .fail(function() {
-        //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+        //myApp.alert('Erro! Tente novamente.', 'Proteq');
         })     
         .done(function(data) {
             console.log("Token sair gravado: "+localStorage.getItem("token"));
@@ -997,7 +997,7 @@ function atualizartokenSindicoSair(data){
             data: "action=tokenSair&token=&guid="+localStorage.getItem("sindicoGuid"),
         })
         .fail(function() {
-        //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+        //myApp.alert('Erro! Tente novamente.', 'Proteq');
         })     
         .done(function(data) {
             console.log("Token sair gravado: "+localStorage.getItem("token"));
@@ -1014,7 +1014,7 @@ function atualizartokenAdministradoraSair(data){
             data: "action=tokenSair&token=&guid="+localStorage.getItem("administradoraGuid"),
         })
         .fail(function() {
-        //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+        //myApp.alert('Erro! Tente novamente.', 'Proteq');
         })     
         .done(function(data) {
             console.log("Token sair gravado: "+localStorage.getItem("token"));
@@ -1031,7 +1031,7 @@ function atualizartokenPortariaSair(data){
             data: "action=tokenSair&token=&guid="+localStorage.getItem("guid"),
         })
         .fail(function() {
-        //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+        //myApp.alert('Erro! Tente novamente.', 'Proteq');
         })     
         .done(function(data) {
             console.log("Token sair gravado: "+data);
@@ -1204,7 +1204,7 @@ function modulos(){
                     }
                 myApp.hideIndicator();
                 }else{
-                    myApp.alert('Erro de conexão com o servidor! O App será fechado.', 'Aptohome');
+                    myApp.alert('Erro de conexão com o servidor! O App será fechado.', 'Proteq');
                     navigator.app.exitApp();
                 }
             }
@@ -1237,7 +1237,7 @@ function profile(){
     atualizartoken(localStorage.getItem("token"));
         //popupBanner();
         //mainView.router.loadPage("bannercont");
-        //myApp.alert('Morador editado om sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'bannercont'});popupBanner();});
+        //myApp.alert('Morador editado om sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'bannercont'});popupBanner();});
 }
 
 //////////////////////////// profile sindico /////////////////////////////
@@ -1276,7 +1276,7 @@ function profileSindico(){
 
     atualizartokenSindico(localStorage.getItem("token"));
         //mainView.router.loadPage("bannercont");
-        //myApp.alert('Morador editado om sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'bannercont'});popupBanner();});
+        //myApp.alert('Morador editado om sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'bannercont'});popupBanner();});
 }
 
 ///////////////// lista os condomínio dos síndicos ou administradoras /////////////
@@ -1314,7 +1314,7 @@ function updateCond(id,push){
         },error: function(data) {
             myApp.hideIndicator();
             //console.log(data);
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
         }
     });
 
@@ -1350,7 +1350,7 @@ function profileAdministradora(){
 
     atualizartokenAdministradora(localStorage.getItem("token"));
         //mainView.router.loadPage("bannercont");
-        //myApp.alert('Morador editado om sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'bannercont'});popupBanner();});
+        //myApp.alert('Morador editado om sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'bannercont'});popupBanner();});
 }
 
 function listCondAdministradora(){
@@ -1386,7 +1386,7 @@ function updateCondAdministradora(id,push){
         },error: function(data) {
             myApp.hideIndicator();
             //console.log(data);
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
         }
     });
 
@@ -1430,7 +1430,7 @@ function profilePortaria(){
     atualizartokenPortaria(localStorage.getItem("token"));
         //popupBanner();
         //mainView.router.loadPage("bannercont");
-        //myApp.alert('Morador editado om sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'bannercont'});popupBanner();});
+        //myApp.alert('Morador editado om sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'bannercont'});popupBanner();});
 }
 
 
@@ -1907,7 +1907,7 @@ $$('.edit_profile').on('click', function(){
         }
          ,error:function(data){
             myApp.hideIndicator();
-            myApp.alert('Erro! Favor tentar novamente.', 'Aptohome');
+            myApp.alert('Erro! Favor tentar novamente.', 'Proteq');
          }
         });
 
@@ -2005,7 +2005,7 @@ $('#buteditprofile').on('click', function(){
             enviarprofile();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 });
 
@@ -2109,12 +2109,12 @@ if (indexofImage!="-1") {
                 }
                 
                 myApp.hideIndicator();
-                myApp.alert('Usuário editado om sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'index'});});
+                myApp.alert('Usuário editado om sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'index'});});
             });
         }
          ,error:function(data){
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
          }
         });
 
@@ -2144,7 +2144,7 @@ function popupBanner(){
             },error: function(data) {
                 myApp.hideIndicator();
                 //console.log(data);
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -2170,7 +2170,7 @@ function camerasdeseguranca(){
              ,error:function(data){
                 myApp.hideIndicator();
                 $('#camerasdeseguranca-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
              }
         });
     //alert("Entrei");
@@ -2249,7 +2249,7 @@ function pagamentos(){
             },error: function(data) {
                 myApp.hideIndicator();
                 $('#pagamentos-cont').html("<li class='semregistro'>Você não tem nunhuma negociação de débito em aberto. Pra solicitar uma negociação entre em contato com o Síndico ou Administradora.</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -2305,7 +2305,7 @@ function pagamentoscont(idpagamentos){
             },error: function(data) {
                 myApp.hideIndicator();
                 $('#pagamentoscont-cont').html("<li class='semregistro'>Você não tem nunhuma negociação de débito. Pra solicitar uma negociação entre em contato com o Síndico.</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -2453,7 +2453,7 @@ $('#butinserirpagamentos').on('click', function(){
             enviarpagamentos();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 });
 
@@ -2491,7 +2491,7 @@ function enviarpagamentos()
         })
           .fail(function() {
             myApp.hidePreloader();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             $('#formCard').each (function(){
@@ -2499,10 +2499,10 @@ function enviarpagamentos()
             });
             if (data!="ok") {
                 myApp.hidePreloader();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hidePreloader();
-                myApp.alert('Pagamento realizado com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'pagamentos'}); pagamentos();});
+                myApp.alert('Pagamento realizado com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'pagamentos'}); pagamentos();});
             }
           });
 }
@@ -2610,7 +2610,7 @@ function muraldeanuncios(){
              ,error:function(data){
                 myApp.hideIndicator();
                 $('#muraldeanuncios-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
              }
         });
 }
@@ -2627,7 +2627,7 @@ function delanuncio(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 myApp.swipeoutDelete($$('li.swipeout-anuncio').eq($("li.swipeout-anuncio[data-index="+eq+"]").index()));
@@ -2636,7 +2636,7 @@ function delanuncio(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -2705,7 +2705,7 @@ function muraldeanuncioscont(id){
             }
              ,error:function(data){
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
              }
         });
 }
@@ -2834,7 +2834,7 @@ $('#butinseriranuncios').on('click', function(){
             enviaranuncios();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 });
 
@@ -2867,15 +2867,15 @@ function enviaranuncios()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Anúncio inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'muraldeanuncios'}); muraldeanuncios();});
+                myApp.alert('Anúncio inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'muraldeanuncios'}); muraldeanuncios();});
             }
           });
 }
@@ -2890,7 +2890,7 @@ $('#butinseriralertaportaria').on('click', function(){
             enviaralertaportaria();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 });
 
@@ -2916,15 +2916,15 @@ function enviaralertaportaria()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Alerta inserido com sucesso!', 'Aptohome', function () { window.location = "index.html";});
+                myApp.alert('Alerta inserido com sucesso!', 'Proteq', function () { window.location = "index.html";});
             }
           });
 }
@@ -3039,7 +3039,7 @@ function livroocorrencias(){
         },error:function(data){
             myApp.hideIndicator();
             $('#ocorrencias-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-            //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            //myApp.alert('Erro! Tente novamente.', 'Proteq');
          }
     });
 }
@@ -3056,7 +3056,7 @@ function delocorrencia(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 console.log($("li.swipeout-ocorrencia[data-index="+eq+"]").index());
@@ -3066,7 +3066,7 @@ function delocorrencia(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -3214,7 +3214,7 @@ function livroocorrenciascont(id,push){
 
             },error: function(data) {
                 //myApp.hideIndicator();
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 
@@ -3292,7 +3292,7 @@ function inserirocorrencias(){
                 myApp.hideIndicator(); 
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro ao carregar dados, tente novamente!', 'Aptohome', function () { mainView.router.load({pageName: 'livroocorrencias'}); livroocorrencias();});
+                myApp.alert('Erro ao carregar dados, tente novamente!', 'Proteq', function () { mainView.router.load({pageName: 'livroocorrencias'}); livroocorrencias();});
             }
         });
 }
@@ -3386,7 +3386,7 @@ $('#butinserirocorrencias').on('click', function(){
             enviarocorrencias();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 });
 
@@ -3419,7 +3419,7 @@ $$('#pdfFileOcorrencias').on('change', function (e) {
           myApp.hideIndicator();
         }
     }else{
-        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Aptohome');
+        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Proteq');
     }
 
 });
@@ -3451,19 +3451,19 @@ function enviarocorrencias()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if (data!="ok") {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
                     $('#forminserirocorrencias').each (function(){
                       this.reset();
                     });
                     $('input[type=hidden]').val("");
-                    myApp.alert('Ocorrência inserida com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'livroocorrencias'}); livroocorrencias();});
+                    myApp.alert('Ocorrência inserida com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'livroocorrencias'}); livroocorrencias();});
                 }
               });
 
@@ -3476,12 +3476,12 @@ function enviarocorrencias()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if (data!="ok") {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -3490,7 +3490,7 @@ function enviarocorrencias()
                     });
                     $('input[type=hidden]').val("");
 
-                    myApp.alert('Ocorrência inserida com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'livroocorrencias'}); livroocorrencias();});
+                    myApp.alert('Ocorrência inserida com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'livroocorrencias'}); livroocorrencias();});
                 }
               });
         }
@@ -3573,7 +3573,7 @@ function transparenciadecontas(){
             },error: function(data) {
                 myApp.hideIndicator();
                 $('#transparenciadecontas-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -3592,7 +3592,7 @@ function deltransparencia(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 myApp.swipeoutDelete($$('li.swipeout-transparencia').eq($("li.swipeout-transparencia[data-index="+eq+"]").index()));
@@ -3601,7 +3601,7 @@ function deltransparencia(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -3674,7 +3674,7 @@ function transparenciadecontascont(id){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -3766,7 +3766,7 @@ $('#butinserirtransparencia').on('click', function(){
             enviartransparencia();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -3800,7 +3800,7 @@ $$('#pdfFileTransparencia').on('change', function (e) {
           
         }
     }else{
-        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Aptohome');
+        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Proteq');
     }
 
 });
@@ -3839,12 +3839,12 @@ function enviartransparencia()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if ((data!="ok") && (data!=" ok")) {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -3853,7 +3853,7 @@ function enviartransparencia()
                     });
                     $('input[type=hidden]').val("");
 
-                    myApp.alert('Transparência inserida com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'transparenciadecontas'}); transparenciadecontas();});
+                    myApp.alert('Transparência inserida com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'transparenciadecontas'}); transparenciadecontas();});
                 }
               });
         }else{
@@ -3868,12 +3868,12 @@ function enviartransparencia()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if ((data!="ok") && (data!=" ok")) {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -3882,7 +3882,7 @@ function enviartransparencia()
                     });
                     $('input[type=hidden]').val("");
 
-                    myApp.alert('Transparência inserida com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'transparenciadecontas'}); transparenciadecontas();});
+                    myApp.alert('Transparência inserida com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'transparenciadecontas'}); transparenciadecontas();});
                 }
               });
 
@@ -3961,7 +3961,7 @@ function servico(){
             },error: function(data) {
                 myApp.hideIndicator();
                 $('#servico-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -3980,7 +3980,7 @@ function delservico(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 myApp.swipeoutDelete($$('li.swipeout-servico').eq($("li.swipeout-servico[data-index="+eq+"]").index()));
@@ -3989,7 +3989,7 @@ function delservico(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -4062,7 +4062,7 @@ function servicocont(id){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -4154,7 +4154,7 @@ $('#butinserirservico').on('click', function(){
             enviarservico();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -4188,15 +4188,15 @@ function enviarservico()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Serviço inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'servico'}); servico();});
+                myApp.alert('Serviço inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'servico'}); servico();});
             }
           });
 }
@@ -4313,7 +4313,7 @@ function delcronograma(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 myApp.swipeoutDelete($$('li.swipeout-cronograma').eq($("li.swipeout-cronograma[data-index="+eq+"]").index()));
@@ -4322,7 +4322,7 @@ function delcronograma(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -4395,7 +4395,7 @@ function cronogramacont(id){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -4487,7 +4487,7 @@ $('#butinserircronograma').on('click', function(){
             enviarcronograma();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -4521,15 +4521,15 @@ function enviarcronograma()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Equipe inserida com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'cronograma'}); cronograma();});
+                myApp.alert('Equipe inserida com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'cronograma'}); cronograma();});
             }
           });
 }
@@ -4636,7 +4636,7 @@ function delmorador(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 myApp.swipeoutDelete($$('li.swipeout-morador').eq($("li.swipeout-morador[data-index="+eq+"]").index()));
@@ -4645,7 +4645,7 @@ function delmorador(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -4704,7 +4704,7 @@ function moradorcont(id){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -4796,7 +4796,7 @@ $('#butinseriraddmorador').on('click', function(){
             enviaraddmorador();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -4830,18 +4830,18 @@ function enviaraddmorador()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data=="ok") {
                myApp.hideIndicator();
-                myApp.alert('Morador inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'morador'}); morador();});
+                myApp.alert('Morador inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'morador'}); morador();});
             } else if (data=="erro"){
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert(data, 'Aptohome');
+                myApp.alert(data, 'Proteq');
             }
 
           });
@@ -4872,18 +4872,18 @@ $$('#cadastro-teste').on('click', function(){
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data=="ok") {
                myApp.hideIndicator();
-                myApp.alert('Morador teste cadastrado com sucesso!<br><br>Você receberá um email de confirmação para criar sua senha (Caso não receba, verificar na pasta SPAM).', 'Aptohome', function () { myApp.closeModal('.popup.modal-in');});
+                myApp.alert('Morador teste cadastrado com sucesso!<br><br>Você receberá um email de confirmação para criar sua senha (Caso não receba, verificar na pasta SPAM).', 'Proteq', function () { myApp.closeModal('.popup.modal-in');});
             } else if (data=="erro"){
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert(data, 'Aptohome');
+                myApp.alert(data, 'Proteq');
             }
 
           });
@@ -5077,7 +5077,7 @@ function alertaportariacont(id){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 }
@@ -5184,7 +5184,7 @@ function delvisitante(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 myApp.swipeoutDelete($$('li.swipeout-visitante').eq($("li.swipeout-visitante[data-index="+eq+"]").index()));
@@ -5193,7 +5193,7 @@ function delvisitante(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -5321,7 +5321,7 @@ function visitantecont(id,action,active){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 
@@ -5507,20 +5507,20 @@ $('#butinserirvisitante').on('click', function(){
     if (localStorage.getItem("portariaIdportaria")) {
         if (!$('#txtvisitantecondominio:checked').val()){
             if ($$('#blocolistportariavisitantes').val()=="" || $$('#domiciliolistportariavisitantes').val()=="") {
-                myApp.alert('Selecione o Bloco e Apartamento.', 'Aptohome');
+                myApp.alert('Selecione o Bloco e Apartamento.', 'Proteq');
             }else{
 
                 if ($$('#txtnomevisitante').val()!="") {
                     enviarvisitante();
                 }else{
-                    myApp.alert('Preencha todos os campos.', 'Aptohome');    
+                    myApp.alert('Preencha todos os campos.', 'Proteq');    
                 }
             }
         }else{
             if ($$('#txtnomevisitante').val()!="") {
                 enviarvisitante();
             }else{
-                myApp.alert('Preencha todos os campos.', 'Aptohome');    
+                myApp.alert('Preencha todos os campos.', 'Proteq');    
             }
         }
     }else{  
@@ -5530,14 +5530,14 @@ $('#butinserirvisitante').on('click', function(){
 
         if ($$('#txtnomevisitante').val()!="") {
             if (datatermino<datainicio) {
-                myApp.alert('Data término deve ser maior que data início', 'Aptohome'); 
+                myApp.alert('Data término deve ser maior que data início', 'Proteq'); 
             } else if (($$('#txthorainiciotempvisitante').val()!="") && ($$('#txthorainiciotempvisitante').val()==$$('#txthoraterminotempvisitante').val())) {
-                 myApp.alert('Data início e término devem ser diferentes', 'Aptohome'); 
+                 myApp.alert('Data início e término devem ser diferentes', 'Proteq'); 
             } else{
                 enviarvisitante();
             }
         }else{
-            myApp.alert('Preencha todos os campos.', 'Aptohome');    
+            myApp.alert('Preencha todos os campos.', 'Proteq');    
         }
     }
 
@@ -5674,19 +5674,19 @@ function enviarvisitante()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data=="" || data =="erro") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
                 console.log(data);
             } else {
                 myApp.hideIndicator();
                 if (localStorage.getItem("portariaIdportaria")) {
-                    myApp.alert('Visitante inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'index'});});
+                    myApp.alert('Visitante inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'index'});});
                 }else{
-                    myApp.alert('Visitante inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'visitante'}); visitante();});
+                    myApp.alert('Visitante inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'visitante'}); visitante();});
                 }
             }
           });
@@ -5738,19 +5738,19 @@ function enviarvisitanteacesso(acesso)
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
                 console.log(data);
             } else {
                 myApp.hideIndicator();
                 if (acesso=="entrada") {
-                    myApp.alert('Entrada inserida com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'index'});});
+                    myApp.alert('Entrada inserida com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'index'});});
                 }else if (acesso=="saida") {
-                    myApp.alert('Saída inserida com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'index'});});
+                    myApp.alert('Saída inserida com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'index'});});
                 }
             }
           });
@@ -5841,7 +5841,7 @@ function delveiculo(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 myApp.swipeoutDelete($$('li.swipeout-veiculo').eq($("li.swipeout-veiculo[data-index="+eq+"]").index()));
@@ -5850,7 +5850,7 @@ function delveiculo(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -5931,7 +5931,7 @@ function veiculocont(id){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -6124,7 +6124,7 @@ $('#butinserirveiculo').on('click', function(){
             enviarveiculo();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -6160,15 +6160,15 @@ function enviarveiculo()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Veículo inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'veiculo'}); veiculo();});
+                myApp.alert('Veículo inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'veiculo'}); veiculo();});
             }
           });
 }
@@ -6258,7 +6258,7 @@ $('#inserircomuncondominio').on('click', function(){
                 myApp.hideIndicator(); 
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro ao carregar dados, tente novamente!', 'Aptohome', function () { mainView.router.load({pageName: 'comuncondominio'}); comuncondominio();});
+                myApp.alert('Erro ao carregar dados, tente novamente!', 'Proteq', function () { mainView.router.load({pageName: 'comuncondominio'}); comuncondominio();});
             }
         });
     }
@@ -6721,7 +6721,7 @@ function comuncomunicadocont(id){
 
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 
@@ -6782,7 +6782,7 @@ function comuncomunicadocont(id){
 
             },error: function(data) {
                 //myApp.hideIndicator();
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 
@@ -6908,7 +6908,7 @@ $('#butinserircomuncondominio').on('click', function(){
             enviarcomuncondominio();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -6943,7 +6943,7 @@ $$('#pdfFileComuncondominio').on('change', function (e) {
           
         }
     }else{
-        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Aptohome');
+        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Proteq');
     }
 
 });
@@ -7000,12 +7000,12 @@ function enviarcomuncondominio()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if ((data!="ok") && (data!=" ok")) {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -7014,7 +7014,7 @@ function enviarcomuncondominio()
                     });
                     $('input[type=hidden]').val("");
 
-                    myApp.alert('Comunicado inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'comuncondominio'}); comuncondominio();});
+                    myApp.alert('Comunicado inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'comuncondominio'}); comuncondominio();});
                 }
               });
         }else{
@@ -7028,12 +7028,12 @@ function enviarcomuncondominio()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if ((data!="ok") && (data!=" ok")) {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -7042,7 +7042,7 @@ function enviarcomuncondominio()
                     });
                     $('input[type=hidden]').val("");
 
-                    myApp.alert('Comunicado inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'comuncondominio'}); comuncondominio();});
+                    myApp.alert('Comunicado inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'comuncondominio'}); comuncondominio();});
                 }
               });
         }
@@ -7096,7 +7096,7 @@ ptrContent.on('refresh', function (e) {
                 myApp.hideIndicator(); 
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro ao carregar dados, tente novamente!', 'Aptohome', function () { mainView.router.load({pageName: 'comunportaria'}); comunportaria();});
+                myApp.alert('Erro ao carregar dados, tente novamente!', 'Proteq', function () { mainView.router.load({pageName: 'comunportaria'}); comunportaria();});
             }
         });
     }
@@ -7440,7 +7440,7 @@ function comunportariacont(id){
 
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 
@@ -7500,7 +7500,7 @@ function comunportariacont(id){
 
             },error: function(data) {
                 /*myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');*/
+                myApp.alert('Erro! Tente novamente.', 'Proteq');*/
             }
         });
 
@@ -7626,7 +7626,7 @@ function butinserirresp(){
             enviarresp();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 }
@@ -7692,15 +7692,15 @@ function enviarresp()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if ((data!="ok") && (data!=" ok")) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Resposta inserida com sucesso!', 'Aptohome', function () { mainView.router.back();});
+                myApp.alert('Resposta inserida com sucesso!', 'Proteq', function () { mainView.router.back();});
             }
           });
 }
@@ -7821,7 +7821,7 @@ $('#butinserircomunportaria').on('click', function(){
             enviarcomunportaria();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -7855,7 +7855,7 @@ $$('#pdfFileComunportaria').on('change', function (e) {
           reader.readAsDataURL(f);
         }
     }else{
-        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Aptohome');
+        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Proteq');
     }
 
 });
@@ -7929,12 +7929,12 @@ function enviarcomunportaria()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if ((data!="ok") && (data!=" ok")) {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -7944,9 +7944,9 @@ function enviarcomunportaria()
                     $('input[type=hidden]').val("");
 
                     if (localStorage.getItem("portariaIdportaria")) {
-                        myApp.alert('Comunicado inserido com sucesso!', 'Aptohome', function () { window.location = "index.html";});
+                        myApp.alert('Comunicado inserido com sucesso!', 'Proteq', function () { window.location = "index.html";});
                     }else{
-                        myApp.alert('Comunicado inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'comuncondominio'}); comunportaria();});
+                        myApp.alert('Comunicado inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'comuncondominio'}); comunportaria();});
                     }
                 }
               });
@@ -7961,12 +7961,12 @@ function enviarcomunportaria()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if ((data!="ok") && (data!=" ok")) {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -7976,9 +7976,9 @@ function enviarcomunportaria()
                     $('input[type=hidden]').val("");
 
                     if (localStorage.getItem("portariaIdportaria")) {
-                        myApp.alert('Comunicado inserido com sucesso!', 'Aptohome', function () { window.location = "index.html";});
+                        myApp.alert('Comunicado inserido com sucesso!', 'Proteq', function () { window.location = "index.html";});
                     }else{
-                        myApp.alert('Comunicado inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'comuncondominio'}); comunportaria();});
+                        myApp.alert('Comunicado inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'comuncondominio'}); comunportaria();});
                     }
                 }
               });
@@ -8185,7 +8185,7 @@ function comunmoradorcont(id){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 
@@ -8245,7 +8245,7 @@ function comunmoradorcont(id){
 
             },error: function(data) {
                 /*myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');*/
+                myApp.alert('Erro! Tente novamente.', 'Proteq');*/
             }
         });
 
@@ -8379,7 +8379,7 @@ $('#butinserircomunmorador').on('click', function(){
             enviarcomunmorador();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -8413,7 +8413,7 @@ $$('#pdfFileComunmorador').on('change', function (e) {
           reader.readAsDataURL(f);
         }
     }else{
-        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Aptohome');
+        myApp.alert('Formato inválido! Escolha um arquivo no formato PDF.', 'Proteq');
     }
 
 });
@@ -8447,12 +8447,12 @@ function enviarcomunmorador()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if ((data!="ok") && (data!=" ok")) {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -8461,7 +8461,7 @@ function enviarcomunmorador()
                     });
                     $('input[type=hidden]').val("");
 
-                    myApp.alert('Comunicado inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'comuncondominio'}); comunmorador();});
+                    myApp.alert('Comunicado inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'comuncondominio'}); comunmorador();});
                 }
               });
         }else{
@@ -8475,12 +8475,12 @@ function enviarcomunmorador()
             })
               .fail(function() {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
               })     
               .done(function(data) {
                 if ((data!="ok") && (data!=" ok")) {
                     myApp.hideIndicator();
-                    myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                    myApp.alert('Erro! Tente novamente.', 'Proteq');
                 } else {
                     myApp.hideIndicator();
 
@@ -8489,7 +8489,7 @@ function enviarcomunmorador()
                     });
                     $('input[type=hidden]').val("");
 
-                    myApp.alert('Comunicado inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'comuncondominio'}); comunmorador();});
+                    myApp.alert('Comunicado inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'comuncondominio'}); comunmorador();});
                 }
               });
         }
@@ -8985,7 +8985,7 @@ myApp.onPageReinit('alertadechegadacont', function (page) {
                         localStorage.removeItem('idalertadechegadacont');
                     },error: function(data) {
                         /*myApp.hideIndicator();
-                        myApp.alert('Erro! Tente novamente.', 'Aptohome');*/
+                        myApp.alert('Erro! Tente novamente.', 'Proteq');*/
                     }
                 });
             mainView.router.load({pageName: 'index'});
@@ -9065,7 +9065,7 @@ function banner(){
             },error: function(data) {
                 myApp.hideIndicator();
                 $('#banner-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -9083,17 +9083,17 @@ function delbanner(guid) {
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Banner excluido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'banner'}); banner(); myApp.closeModal('.popup.modal-in');});
+                myApp.alert('Banner excluido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'banner'}); banner(); myApp.closeModal('.popup.modal-in');});
                 //myApp.swipeoutDelete($$('li.img-banner').eq($$("li.img-banner[data-index="+$$(this).attr("data-index").val()+"]").index()));
                 //myApp.swipeoutDelete($$('li.swipeout-cronograma').eq(eq));
             }
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -9142,7 +9142,7 @@ function bannercont(id){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 
@@ -9261,7 +9261,7 @@ $('#butinserirbanner').on('click', function(){
             enviarbanner();
 
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -9293,15 +9293,15 @@ function enviarbanner()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if ((data!="ok") && (data!=" ok")) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Banner inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'banner'}); banner();});
+                myApp.alert('Banner inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'banner'}); banner();});
             }
           });
 }
@@ -9364,7 +9364,7 @@ function agendamentodeespaco() {
             },error: function(data) {
                 //myApp.hideIndicator();
                 //$('#banner-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     $$('.actionOptionAgendamento').on('click', function (e) {
@@ -9412,7 +9412,7 @@ console.log("dia = "+dia+" local = "+idlocalespaco);
             },error: function(data) {
                 //myApp.hideIndicator();
                 //$('#banner-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     $$('.actionOptionAgendamento').on('click', function (e) {
@@ -9464,7 +9464,7 @@ console.log("dia = "+dia+" local = "+idlocalespaco);
             
             },error: function(data) {
                 myApp.hideIndicator();
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 
@@ -9578,7 +9578,7 @@ console.log("dia = "+dia+" local = "+idlocalespaco);
             
             },error: function(data) {
                 myApp.hideIndicator();
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
         //console.log(dia+","+idlocalespaco);
@@ -9621,15 +9621,15 @@ function confespaco(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
-                myApp.alert('Agendamento confirmado com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'agendamentodeespaco'});agendamentodeespaco();});
+                myApp.alert('Agendamento confirmado com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'agendamentodeespaco'});agendamentodeespaco();});
             }
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -9649,7 +9649,7 @@ function delespaco(guid,eq){
             success: function(data) {
             if (data!="ok") {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente ='+data, 'Aptohome');
+                myApp.alert('Erro! Tente novamente ='+data, 'Proteq');
             } else {
                 myApp.hideIndicator();
                 myApp.swipeoutDelete($$('li.swipeout-espaco').eq($("li.swipeout-espaco[data-index="+eq+"]").index()));
@@ -9658,7 +9658,7 @@ function delespaco(guid,eq){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     });
@@ -9747,7 +9747,7 @@ function espacocont(id,push){
             
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
     //alert("Entrei");
@@ -9817,7 +9817,7 @@ $('.inseriragendamentodeespaco').on('click', function(){
                 myApp.hideIndicator(); 
             },error: function(data) {
                 myApp.hideIndicator();
-                myApp.alert('Erro ao carregar dados, tente novamente!', 'Aptohome', function () { mainView.router.load({pageName: 'comuncondominio'}); comuncondominio();});
+                myApp.alert('Erro ao carregar dados, tente novamente!', 'Proteq', function () { mainView.router.load({pageName: 'comuncondominio'}); comuncondominio();});
             }
         });
     }
@@ -9937,7 +9937,7 @@ function valorestaxasagendamento(){
             },error: function(data) {
                 //myApp.hideIndicator();
                 //$('#banner-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
-                //myApp.alert('Erro! Tente novamente.', 'Aptohome');
+                //myApp.alert('Erro! Tente novamente.', 'Proteq');
             }
         });
 }
@@ -9948,14 +9948,14 @@ $$('#butinseriragendamento').on('click', function(){
 
     if (($$('#horainicoagendamento').val()!="00:00") &&  ($$('#horaterminoagendamento').val()!="00:00")) {
         if ($$('#horaterminoagendamento').val()<$$('#horainicoagendamento').val()) {
-            myApp.alert('Hora término deve ser maior que hora início', 'Aptohome'); 
+            myApp.alert('Hora término deve ser maior que hora início', 'Proteq'); 
         } else if ($$('#horaterminoagendamento').val()==$$('#horainicoagendamento').val()) {
-             myApp.alert('Hora início e término devem ser diferentes', 'Aptohome'); 
+             myApp.alert('Hora início e término devem ser diferentes', 'Proteq'); 
         } else{
             enviarespaco();
         }
     }else{
-        myApp.alert('Preencha todos os campos.', 'Aptohome');    
+        myApp.alert('Preencha todos os campos.', 'Proteq');    
     }
 
 });
@@ -9985,12 +9985,12 @@ function enviarespaco()
         })
           .fail(function() {
             myApp.hideIndicator();
-            myApp.alert('Erro! Tente novamente.', 'Aptohome');
+            myApp.alert('Erro! Tente novamente.', 'Proteq');
           })     
           .done(function(data) {
             if ((data=="ok") || (data==" ok")) {
                 myApp.hideIndicator();
-                myApp.alert('Agendamento inserido com sucesso!', 'Aptohome', function () { mainView.router.load({pageName: 'agendamentodeespaco'});agendamentodeespaco();});
+                myApp.alert('Agendamento inserido com sucesso!', 'Proteq', function () { mainView.router.load({pageName: 'agendamentodeespaco'});agendamentodeespaco();});
 
                 $('#forminseriragendamentodeespaco').each (function(){
                   this.reset();
@@ -10003,7 +10003,7 @@ function enviarespaco()
                   this.reset();
                 });
 
-                myApp.alert(data, 'Aptohome', function () { mainView.router.load({pageName: 'agendamentodeespaco'});agendamentodeespaco();});           
+                myApp.alert(data, 'Proteq', function () { mainView.router.load({pageName: 'agendamentodeespaco'});agendamentodeespaco();});           
             }
           });
 }
@@ -10513,7 +10513,7 @@ $('.buttonshare').hide();
                             localStorage.removeItem('trackingactive');
                         },error: function(data) {
                             /*myApp.hideIndicator();
-                            myApp.alert('Erro! Tente novamente.', 'Aptohome');*/
+                            myApp.alert('Erro! Tente novamente.', 'Proteq');*/
                         }
                     });
 
@@ -10668,7 +10668,7 @@ $('.buttonshare').hide();
                             localStorage.removeItem('panico');
                         },error: function(data) {
                             /*myApp.hideIndicator();
-                            myApp.alert('Erro! Tente novamente.', 'Aptohome');*/
+                            myApp.alert('Erro! Tente novamente.', 'Proteq');*/
                         }
                     });
 
@@ -10817,7 +10817,7 @@ $('.buttonshare').hide();
                                 }
                             },error: function(data) {
                                 /*myApp.hideIndicator();
-                                myApp.alert('Erro! Tente novamente.', 'Aptohome');*/
+                                myApp.alert('Erro! Tente novamente.', 'Proteq');*/
                             }
                         });
 
@@ -11245,7 +11245,7 @@ $('.buttonshare').hide();
                                 }
                             },error: function(data) {
                                 /*myApp.hideIndicator();
-                                myApp.alert('Erro! Tente novamente.', 'Aptohome');*/
+                                myApp.alert('Erro! Tente novamente.', 'Proteq');*/
                             }
                         });
 
