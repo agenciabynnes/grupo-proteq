@@ -54,6 +54,8 @@
 <variable name="ACCOUNT_TYPE" value="$PACKAGE_NAME.account"/>
 <variable name="CONTENT_AUTHORITY" value="$PACKAGE_NAME"/>
 <variable name="ALWAYS_USAGE_DESCRIPTION" value="This app requires background location tracking"/>
+<variable name="ICON" value="@drawable/icon" />
+<variable name="SMALL_ICON" value="@drawable/icon" />
 </plugin>
 <platform name="android" >
     <preference name="android-minSdkVersion" value="16"/>
