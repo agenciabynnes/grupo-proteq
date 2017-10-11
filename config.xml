@@ -50,10 +50,9 @@
 <variable name="SENDER_ID" value="214666097431"/>
 </plugin>
 <plugin name="cordova-plugin-background-mode" spec="0.7.2"/>
-<plugin name="cordova-plugin-mauron85-background-geolocation" spec="0.9.6"/>
 <preference  name="AutoHideSplashScreen" value="true"/>
 <preference  name="SplashScreenDelay" value="3000"/>
-<preference  name="FadeSplashScreen" value="true"/>
+<preference  name="FadeSplashScreen" value="false"/>
 <preference  name="FadeSplashScreenDuration" value="0"/>
 <preference  name="ShowSplashScreenSpinner" value="false"/>
 <preference  name="SplashMaintainAspectRatio" value="true"/>
@@ -61,12 +60,13 @@
 <preference  name="UIWebViewBounce" value="false"/>
 <preference  name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root"/>
 <platform name="android" >
-<platform name="android" >
     <preference name="android-minSdkVersion" value="16"/>
     <preference name="android-targetSdkVersion" value="19"/>
     <preference name="android-installLocation" value="auto"/>
-    <preference name="android-signed" value="true"/>
+    <preference name="Fullscreen" value="false"/>
+    <preference name="Orientation" value="default"/>
     <preference name="AndroidLaunchMode" value="singleTop"/>
+    <preference name="android-signed" value="true"/>
 </platform>
 <splash platform="android" src="package-assets/splash-android-426-320.png" density="ldpi" width="426" height="320" orientation="landscape"/>
 <splash platform="android" src="package-assets/splash-android-470-320.png" density="mdpi" width="470" height="320" orientation="landscape"/>
@@ -76,7 +76,6 @@
 <splash platform="android" src="package-assets/splash-android-720-960.png" density="xhdpi" width="720" height="960" orientation="portrait"/>
 <splash platform="android" src="package-assets/splash-android-320-470.png" density="mdpi" width="320" height="470" orientation="portrait"/>
 <splash platform="android" src="package-assets/splash-android-320-426.png" density="ldpi" width="320" height="426" orientation="portrait"/>
-
 <icon platform="android" src="package-assets/icon-36.png" density="ldpi" width="36" height="36"/>
 <icon platform="android" src="package-assets/icon-48.png" density="mdpi" width="48" height="48"/>
 <icon platform="android" src="package-assets/icon-72.png" density="hdpi" width="72" height="72"/>
