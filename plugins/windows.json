@@ -1,0 +1,86 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-mauron85-background-geolocation": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "214666097431",
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "HelloCordova"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "HelloCordova"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "HelloCordova"
+        }
+    }
+}
